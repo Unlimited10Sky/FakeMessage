@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  background: #f2f2f7;  /* iOS 系统灰色背景 */
+}
+
+.iphone-container {
+  max-width: 414px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: white;  /* 容器背景改为白色 */
+}
+
+.control-bar {
+  padding: 10px;
+  background: #f7f7f7;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.message-container {
+  flex: 1;
+  overflow-y: auto;
+  background: #ffffff;  /* 消息区域背景为白色 */
+  padding: 10px;
+}
+
+/* 修改消息气泡样式 */
+.message-sent .message-bubble {
+  background-color: #34c759 !important;  /* iOS 绿色 */
+  color: white;
+}
+
+.message-received .message-bubble {
+  background-color: #e9e9eb !important;  /* iOS 灰色 */
+  color: black;
+}
+
+/* 添加 iOS 风格的顶部状态栏 */
+.status-bar {
+  background: #f7f7f7;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* 添加删除按钮样式 */
+.delete-button {
+  color: #ff3b30;  /* iOS 红色 */
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* 在现有样式基础上添加 */
+.ios-status-bar {
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 确保所有按钮都有正确的触摸反馈 */
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:active {
+  opacity: 0.7;
+}
+
+/* 禁用文本选择 */
+.ios-status-bar,
+.chat-header {
+  user-select: none;
+  -webkit-user-select: none;
+} 
